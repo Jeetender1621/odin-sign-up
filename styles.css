@@ -18,7 +18,7 @@
 .left-container {
     background: url(./Images/Leaves-cover.jpeg) center/cover no-repeat;
     flex: 45%;
-    height: 100vh;
+    min-height: 100vh;
     color: var(--font-color);
     display: flex;
     flex-direction: column;
@@ -62,8 +62,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    font-size:16px;
-    gap:3vw;
+    gap:2vw;
     background-color: rgb(250, 244, 244);
     --font-size: 1.25rem;
     --margin-left: 3vw;
@@ -71,13 +70,25 @@
 .section-1{
     margin-left:var(--margin-left);
     font-size: var(--font-size);
-    font-weight: 700;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.now{
+    color: #596D48;
+    font-weight:900;
+    text-decoration: none;
 }
 .section-2{
     font-size: var(--font-size);
     background-color: var(--font-color);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-    padding: 2vw;
+    padding: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8vw;
 }
 .form-row {
     display: flex;
@@ -96,22 +107,31 @@
 }
 
 label {
-    font-size: 16px;
+    font-size: 1.25rem;
+    letter-spacing: 0.15vw;
     font-weight: bold;
-    color: rgb(87, 85, 85);
+    color: rgba(61, 59, 59, 0.861);
+    font-family: norse-god;
 }
 
 input {
     width: 100%;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
+    font-size: var(--font-size);
+    border: 1px solid #e2dada;
     border-radius: 5px;
 }
+input:focus {
+    border: 2px solid blue; /* Blue border color */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle box-shadow */
+    outline: none;
+}
+
 .section-3{
     font-size:var(--font-size);
     margin-left: var(--margin-left)
 }
+
 .form-heading{
     margin-left:var(--margin-left);
 }
@@ -124,13 +144,54 @@ input {
 .create-account{
     margin-left: var(--margin-left);
     font-size: var(--font-size);
-    background-color:  rgb(85, 114, 26);
+    background-color:  #596D48;
     padding: 0.5em 1.5em ;
     color: var(--font-color);
     font-weight: 700;
     border-radius: 10px;
+    border: 1px solid var(--font-color);
 }
 .log-in{
-    color: rgb(85, 114, 26);
+    color: #596D48;
     font-weight: bold;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap:5vw
+    }
+    .photo-credits{
+        font-size: 2vw;
+    }
+    .left-container {
+        min-height: 300px;
+    }
+    .odin-title {
+
+        font-size: 14vw;
+    }
+
+    .odin-logo {
+        width: 10%;
+    }
+
+    .right-container {
+        --font-size: 3.5vw;
+        padding: 5vw;
+        gap:6vw;  
+    }
+
+    .section-1{
+        gap: 5vw;
+    }
+
+    .section-2{
+        border-radius: 5vw;
+        padding: 4vw;
+    }
+    label {
+        font-size: 1rem;
+    }
 }
