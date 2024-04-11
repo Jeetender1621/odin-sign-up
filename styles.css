@@ -150,6 +150,7 @@ input:focus {
     font-weight: 700;
     border-radius: 10px;
     border: 1px solid var(--font-color);
+    margin-top: 2vw;
 }
 .log-in{
     color: #596D48;
@@ -194,7 +195,11 @@ input:focus {
     label {
         font-size: 1rem;
     }
+    .create-account{
+        font-size: 0.8rem;
+    }
     .present-user{
         text-align: center;
     }
+    
 }
